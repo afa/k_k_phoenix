@@ -34,6 +34,8 @@ defmodule KkWeb.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
-     {:credo, "~> 0.7", only: [:dev, :test]}]
+     {:logger_lager_backend, "~> 0.1.0"},
+     {:credo, "~> 0.7", only: [:dev, :test]},
+     {:phoenix_slime, "~> 0.8.0"}]
   end
 end

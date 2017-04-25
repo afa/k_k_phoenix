@@ -21,12 +21,18 @@ config :kk_web, KkWeb.Endpoint,
       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
       ~r{priv/gettext/.*(po)$},
       ~r{web/views/.*(ex)$},
-      ~r{web/templates/.*(eex)$}
+      ~r{web/templates/.*(eex)$},
+      ~r{web/views/.*(ex)$},
+      ~r{web/templates/.*(eex|slim|slime)$}
     ]
   ]
 
 # Do not include metadata nor timestamps in development logs
-config :logger, :console, format: "[$level] $message\n"
+config :logger,
+  :console, format: "[$level] $message\n",
+  backends: [LoggerLagerBackend],
+  handle_otp_reports: false,
+  level: :debug
 
 # Set a higher stacktrace during development. Avoid configuring such
 # in production as building large stacktraces may be expensive.
