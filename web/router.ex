@@ -16,7 +16,10 @@ defmodule KkWeb.Router do
   scope "/", KkWeb do
     pipe_through :browser # Use the default browser stack
 
-    get "/", PageController, :index
+    # get "/", PageController, :index
+    get "/", GameController, :index
+    post "/setup", UserController, :update
+    post "/play", GameController, :update
   end
 
   # Other scopes may use custom stacks.
