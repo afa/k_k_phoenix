@@ -17,7 +17,7 @@ defmodule KkWeb.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {KkWeb, []},
-     applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext]]
+     applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext, :comeonin]]
   end
 
   # Specifies which paths to compile per environment.
@@ -36,6 +36,8 @@ defmodule KkWeb.Mixfile do
      {:cowboy, "~> 1.0"},
      {:logger_lager_backend, "~> 0.1.0"},
      {:credo, "~> 0.7", only: [:dev, :test]},
-     {:phoenix_slime, "~> 0.8.0"}]
+     {:phoenix_slime, "~> 0.8.0"},
+     {:comeonin, "~> 3.0"}
+   ]
   end
 end
