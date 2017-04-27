@@ -18,6 +18,7 @@ defmodule KkWeb.Router do
 
     # get "/", PageController, :index
     get "/", GameController, :index
+    get "/field", GameController, :field
     post "/setup", UserController, :update
     post "/play", GameController, :update
   end

@@ -1,3 +1,19 @@
 = form_tag("/setup", method: "post")
-= tag(:input, type: "radio", name: "colors", value: "0")
-= content_tag(:button, "set colors", type: "submit")
+  .colors
+    = tag(:input, type: "radio", name: "colors", value: "0")
+    = tag(:input, type: "radio", name: "colors", value: "1")
+    = tag(:input, type: "radio", name: "colors", value: "2")
+    = tag(:input, type: "radio", name: "colors", value: "3")
+    = tag(:input, type: "radio", name: "colors", value: "4")
+    = tag(:input, type: "radio", name: "colors", value: "5")
+    = tag(:input, type: "radio", name: "colors", value: "6")
+    = tag(:input, type: "radio", name: "colors", value: "7")
+
+  .groups
+    = tag(:input, type: "radio", name: "group", value: "0")
+    = tag(:input, type: "radio", name: "group", value: "1")
+    = tag(:input, type: "radio", name: "group", value: "2")
+    = tag(:input, type: "radio", name: "group", value: "3")
+  = content_tag(:button, "set params", type: "submit")
+.game
+  = tag(:image, src: game_path(@conn, :field))
