@@ -11,6 +11,6 @@ defmodule KkWeb.GameController do
 
   def field(conn, _params) do
     conn
-    |> send_file(200, "priv/static/images/phoenix.png", format: "png", width: "250px", height: "250px")
+    |> send_file(200, "priv/static/images/phoenix.png")
   end
 end
