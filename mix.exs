@@ -38,6 +38,7 @@ defmodule KkWeb.Mixfile do
      {:credo, "~> 0.7", only: [:dev, :test]},
      {:phoenix_slime, "~> 0.8.0"},
      {:riak, "~> 1.0"},
+     {:guardian, "~> 0.14.2"},
      {:comeonin, "~> 3.0"}
    ]
   end
